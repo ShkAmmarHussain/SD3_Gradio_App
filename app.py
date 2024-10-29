@@ -6,7 +6,7 @@ from diffusers import StableDiffusion3Pipeline
 from huggingface_hub import login
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-from PIL import Image
+# from PIL import Image
 import io
 import base64
 from dotenv import load_dotenv
@@ -19,7 +19,7 @@ SECRET_KEY = "your_secret_key"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 HF_TOKEN = os.getenv("HF_TOKEN")
-print(HF_TOKEN)
+# print(HF_TOKEN)
 
 app = FastAPI()
 
@@ -73,7 +73,8 @@ except Exception as e:
 # Load the pipeline
 try:
     pipe = StableDiffusion3Pipeline.from_single_file(
-        "sd3_medium_incl_clips_t5xxlfp8.safetensors",
+        # "sd3_medium_incl_clips_t5xxlfp8.safetensors",
+        "realistic_vision_sd3_v1_fp16.safetensors",
         torch_dtype=torch.float32,
         text_encoder_3=None
     )
