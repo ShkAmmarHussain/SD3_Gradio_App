@@ -1,0 +1,4 @@
+realistic_vision_sd3_v1_fp16.safetensors
+sd3_medium_incl_clips_t5xxlfp8.safetensors
+__pycache__
+.env
