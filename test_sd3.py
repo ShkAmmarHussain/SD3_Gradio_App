@@ -2,7 +2,7 @@ from diffusers import StableDiffusion3Pipeline
 import torch
 from huggingface_hub import login
 
-login(token='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')
+login(token='')
 
 
 pipe = StableDiffusion3Pipeline.from_single_file(
